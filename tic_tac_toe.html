@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe game</title>
+    <link rel="stylesheet" href="tic_tac_toe.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="generator">
+        <div class="controls">
+          <label>
+            Ряды :
+            <input class="rows" type="number" min="0" value="3">
+          </label>
+          <label>
+            Количество ячеек для победы :
+            <input class="columns" id="number_to_win" type="number" min="0" value="3">
+          </label>
+          <button class="button" id="create">Создать игру</button>
+        </div>
+        
+      
+    </div>
+    <div class="game_area_container">
+        <div id="game_area" class="game_area">
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="" class="popup_close">x</a>
+                <div class="popup_title">Примите поздравления!</div>
+                <div class="popup_text">Выиграли </div>
+            </div>
+        </div>
+    </div>
+   
+       
+
+    <script src="tic_tac_toe.js"></script>
+</body>
+</html>

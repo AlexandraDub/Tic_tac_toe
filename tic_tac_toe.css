@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+.generator, .button {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+label  {
+    display: block;
+    margin-bottom: 10px;
+    
+}
+.rows, .columns {
+    width: 75px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: thistle;
+    font: 25px bold;
+    
+}
+.button {
+    width: 25%;
+    border-radius: 15px;
+    background-color: thistle;
+    margin-right: 30px;
+    border: rgb(201, 241, 201) 3px solid;
+}
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    transition: ease-in-out 300ms;
+}
+.game_area_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.game_area { 
+    background-color: rgb(201, 241, 201);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 25px;
+}
+
+.cell {
+    margin: 10px;
+    padding: 10px;
+    background: rgb(252, 249, 249);
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Bungee', cursive;
+    color: darkviolet;
+    text-shadow: #a1a59b 2px 5px 7px;
+    border-radius: 14px;
+}
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(216, 191, 216, 0.8);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+}
+.popup_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 10px #2ba805;
+    }
+    50% {
+        box-shadow: 0 0 25px #49e819;
+    }
+    100% {
+        box-shadow: 0 0 3px #2ba805;
+    }
+}
+.popup_content {
+    background-color: rgb(201, 241, 201);
+    color: darkviolet;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+    border-radius: 30px; 
+    animation: glowing 1300ms infinite;
+}
+
+.popup_close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: 'Bungee', cursive;
+    color: darkviolet;
+    font-size: 20px;
+    text-decoration: none ;
+}
